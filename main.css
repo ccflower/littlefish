@@ -1,0 +1,25 @@
+.header {
+    background-color: #fff;
+    height: 40px;
+    padding: 10px 60px;
+    z-index: 100;
+    box-shadow: 0 0 1px rgba(0,0,0,0.25);
+    transition: background-color 0.3s ease-in-out;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+.product-list {
+    list-style-type: none;
+}
+.item-wrapper {
+    padding: 10px 20px;
+}
+.list-detail{
+    border: 1px solid lightgrey;
+    background-color: lightgrey;
+    margin: 10px 10px;
+}
+.label-value {
+    display: inline-block;
+}
