@@ -9,6 +9,15 @@
     width: 100%;
     top: 0;
 }
+.main-content {
+    position: fixed;
+    z-index: 10;
+    top: 61px;
+    left: 0;
+    bottom: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
 .product-list {
     list-style-type: none;
 }
