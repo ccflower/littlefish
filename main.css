@@ -10,11 +10,12 @@
     top: 0;
 }
 .main-content {
-    position: fixed;
+    position: relative;
     z-index: 10;
-    top: 61px;
+    top: 60px;
     left: 0;
     bottom: 0;
+    height: calc(100% - 60px);
     overflow-x: hidden;
     overflow-y: auto;
 }

@@ -3,6 +3,18 @@ var app = new Vue({
     data: {
         productList: []
     },
+    methods: {
+        generateContent(product) {
+            let string = "====================" +
+            "亲~收货了~" +
+            product.name +
+            "请您先保存到自己网盘后再观看或下载噢" +
+            "链接：" + product.panLink +
+            "祝您学习愉快~" +
+            "===================="
+            console.log(string);
+        }
+    },
     mounted: function() {
         Bmob.initialize("55432a69e0efff6ec4a8ade94751a978", "94342d6f5c024f58c754618ecf25444b");
         // get data
