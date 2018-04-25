@@ -5,14 +5,23 @@ var app = new Vue({
     },
     methods: {
         generateContent(product) {
-            let string = "====================" +
-            "亲~收货了~" +
-            product.name +
-            "请您先保存到自己网盘后再观看或下载噢" +
-            "链接：" + product.panLink +
-            "祝您学习愉快~" +
-            "===================="
-            console.log(string);
+            let clipBoardContent = "====================\n" +
+            "亲~收货了~\n" +
+            product.name + "\n" +
+            "请您先保存到自己网盘后再观看或下载噢\n" +
+            "链接：" + product.panLink + "\n" +
+            "祝您学习愉快~\n" +
+            "====================\n";
+            
+            this.copytoClipboard(clipBoardContent);
+        },
+        copytoClipboard(text) {
+            var template = document.getElementById("copy-template");
+            template.innerHTML = text;
+            template.select(); // 选择对象
+            document.execCommand("Copy"); // 执行浏览器复制命令
+            alert("已复制好，可贴粘。");
+            template.innerHTML = "";
         }
     },
     mounted: function() {
