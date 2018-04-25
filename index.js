@@ -4,7 +4,7 @@ var app = new Vue({
         productList: []
     },
     methods: {
-        generateContent(product) {
+        generateDeliveryContent(product) {
             let clipBoardContent = "====================\n" +
             "亲~收货了~\n" +
             product.name + "\n" +
@@ -12,6 +12,12 @@ var app = new Vue({
             "链接：" + product.panLink + "\n" +
             "祝您学习愉快~\n" +
             "====================\n";
+            
+            this.copytoClipboard(clipBoardContent);
+        },
+        generateDeployContent(product) {
+            let clipBoardContent = product.name +
+             "，内容见截图，全套资料低价打包带走，请勿议价，拍下发百度网盘链接。PS:网络电子资料，一旦售出概不退货，拍前请留意谢谢。";
             
             this.copytoClipboard(clipBoardContent);
         },
